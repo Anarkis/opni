@@ -18,7 +18,7 @@ steps:
     commands:
       - apk add --no-cache curl
       - apk add bind-tools
-      - dig https://dagger-io.s3.amazonaws.com/
+      - nslookup https://dagger-io.s3.amazonaws.com/
       - curl https://dagger-io.s3.amazonaws.com/dagger/releases/0.2.36/dagger_v0.2.36_linux_amd64.tar.gz -o dagger
       - curl -sL https://dl.dagger.io/dagger/install.sh | DAGGER_VERSION=0.2.36 sh
       - bin/dagger version
